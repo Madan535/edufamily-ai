@@ -1,3 +1,10 @@
+// Format amounts as Indian rupees (used by the budget planner).
+const rupees = value => new Intl.NumberFormat('en-IN', {
+  style: 'currency',
+  currency: 'INR',
+  maximumFractionDigits: 0
+}).format(Number(value) || 0);
+
 const views = {
   home: document.getElementById('homeView'),
   career: document.getElementById('careerView'),
