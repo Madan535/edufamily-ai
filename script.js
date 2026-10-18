@@ -53,70 +53,97 @@ document.getElementById('careerForm').addEventListener('submit', e => {
 });
 
 const colleges = [
-  {name:'Indian Institute of Technology Bombay',state:'Maharashtra',city:'Mumbai',kind:'IIT · Public institute',url:'https://www.iitb.ac.in/'},
-  {name:'Indian Institute of Technology Delhi',state:'Delhi',city:'New Delhi',kind:'IIT · Public institute',url:'https://home.iitd.ac.in/'},
-  {name:'Indian Institute of Technology Madras',state:'Tamil Nadu',city:'Chennai',kind:'IIT · Public institute',url:'https://www.iitm.ac.in/'},
-  {name:'Indian Institute of Technology Kanpur',state:'Uttar Pradesh',city:'Kanpur',kind:'IIT · Public institute',url:'https://www.iitk.ac.in/'},
-  {name:'Indian Institute of Technology Kharagpur',state:'West Bengal',city:'Kharagpur',kind:'IIT · Public institute',url:'https://www.iitkgp.ac.in/'},
-  {name:'Indian Institute of Technology Hyderabad',state:'Telangana',city:'Sangareddy',kind:'IIT · Public institute',url:'https://www.iith.ac.in/'},
-  {name:'Indian Institute of Technology Roorkee',state:'Uttarakhand',city:'Roorkee',kind:'IIT · Public institute',url:'https://www.iitr.ac.in/'},
-  {name:'Indian Institute of Technology (BHU) Varanasi',state:'Uttar Pradesh',city:'Varanasi',kind:'IIT · Public institute',url:'https://www.iitbhu.ac.in/'},
-  {name:'National Institute of Technology Tiruchirappalli',state:'Tamil Nadu',city:'Tiruchirappalli',kind:'NIT · Public institute',url:'https://www.nitt.edu/'},
-  {name:'National Institute of Technology Warangal',state:'Telangana',city:'Warangal',kind:'NIT · Public institute',url:'https://www.nitw.ac.in/'},
-  {name:'National Institute of Technology Karnataka, Surathkal',state:'Karnataka',city:'Surathkal',kind:'NIT · Public institute',url:'https://www.nitk.ac.in/'},
-  {name:'National Institute of Technology Calicut',state:'Kerala',city:'Kozhikode',kind:'NIT · Public institute',url:'https://nitc.ac.in/'},
-  {name:'National Institute of Technology Rourkela',state:'Odisha',city:'Rourkela',kind:'NIT · Public institute',url:'https://www.nitrkl.ac.in/'},
-  {name:'National Institute of Technology Andhra Pradesh',state:'Andhra Pradesh',city:'Tadepalligudem',kind:'NIT · Public institute',url:'https://www.nitandhra.ac.in/'},
-  {name:'Andhra University College of Engineering',state:'Andhra Pradesh',city:'Visakhapatnam',kind:'University engineering college',url:'https://www.andhrauniversity.edu.in/'},
-  {name:'Anil Neerukonda Institute of Technology and Sciences (ANITS)',state:'Andhra Pradesh',city:'Visakhapatnam',kind:'Engineering college',url:'https://www.anits.edu.in/'},
-  {name:'Gayatri Vidya Parishad College of Engineering',state:'Andhra Pradesh',city:'Visakhapatnam',kind:'Engineering college',url:'https://gvpce.ac.in/'},
-  {name:'GMR Institute of Technology',state:'Andhra Pradesh',city:'Rajam',kind:'Autonomous engineering college',url:'https://gmrit.edu.in/'},
-  {name:'Vignan’s Foundation for Science, Technology and Research',state:'Andhra Pradesh',city:'Vadlamudi, Guntur',kind:'Deemed university',url:'https://vignan.ac.in/'},
-  {name:'R.V.R. & J.C. College of Engineering',state:'Andhra Pradesh',city:'Guntur',kind:'Autonomous engineering college',url:'https://www.rvrjc.ac.in/'},
-  {name:'Vasireddy Venkatadri Institute of Technology',state:'Andhra Pradesh',city:'Nambur, Guntur',kind:'Autonomous engineering college',url:'https://www.vvitguntur.com/'},
-  {name:'N.B.K.R. Institute of Science and Technology',state:'Andhra Pradesh',city:'Vidyanagar, Nellore district',kind:'Autonomous engineering college',url:'https://www.nbkrist.org/'},
-  {name:'Sree Vidyanikethan Engineering College',state:'Andhra Pradesh',city:'Tirupati district',kind:'Engineering college',url:'https://www.svec.education/'},
-  {name:'Sri Venkateswara University College of Engineering',state:'Andhra Pradesh',city:'Tirupati',kind:'University engineering college',url:'https://svuniversity.edu.in/'},
-  {name:'GITAM (Deemed to be University)',state:'Andhra Pradesh',city:'Visakhapatnam',kind:'Deemed university',url:'https://www.gitam.edu/'},
-  {name:'Visvesvaraya National Institute of Technology',state:'Maharashtra',city:'Nagpur',kind:'NIT · Public institute',url:'https://vnit.ac.in/'},
-  {name:'Indian Institute of Information Technology Hyderabad',state:'Telangana',city:'Hyderabad',kind:'IIIT · Public-private partnership',url:'https://www.iiit.ac.in/'},
-  {name:'International Institute of Information Technology Bangalore',state:'Karnataka',city:'Bengaluru',kind:'IIIT · Institute of higher education',url:'https://www.iiitb.ac.in/'},
-  {name:'Birla Institute of Technology and Science, Pilani',state:'Rajasthan',city:'Pilani',kind:'Deemed university',url:'https://www.bits-pilani.ac.in/'},
-  {name:'Vellore Institute of Technology',state:'Tamil Nadu',city:'Vellore',kind:'Private university',url:'https://vit.ac.in/'},
-  {name:'Amrita Vishwa Vidyapeetham',state:'Tamil Nadu',city:'Coimbatore',kind:'Deemed university',url:'https://www.amrita.edu/'},
-  {name:'SRM Institute of Science and Technology',state:'Tamil Nadu',city:'Kattankulathur',kind:'Deemed university',url:'https://www.srmist.edu.in/'},
-  {name:'Anna University',state:'Tamil Nadu',city:'Chennai',kind:'State university',url:'https://www.annauniv.edu/'},
-  {name:'Jadavpur University',state:'West Bengal',city:'Kolkata',kind:'State university',url:'https://jadavpuruniversity.in/'},
-  {name:'Delhi Technological University',state:'Delhi',city:'Delhi',kind:'State university',url:'https://dtu.ac.in/'},
-  {name:'Netaji Subhas University of Technology',state:'Delhi',city:'New Delhi',kind:'State university',url:'https://nsut.ac.in/'},
-  {name:'College of Engineering Pune Technological University',state:'Maharashtra',city:'Pune',kind:'State public university',url:'https://www.coeptech.ac.in/'},
-  {name:'Punjab Engineering College',state:'Chandigarh',city:'Chandigarh',kind:'Deemed-to-be university',url:'https://pec.ac.in/'},
-  {name:'Dayananda Sagar University',state:'Karnataka',city:'Bengaluru',kind:'Private university',url:'https://www.dsu.edu.in/'},
-  {name:'VNR Vignana Jyothi Institute of Engineering and Technology',state:'Telangana',city:'Hyderabad',kind:'Autonomous engineering college',url:'https://www.vnrvjiet.ac.in/'},
-  {name:'Bharat Institute of Engineering and Technology',state:'Telangana',city:'Ibrahimpatnam',kind:'Engineering college',url:'https://biet.ac.in/'},
-  {name:'National Institute of Technology Durgapur',state:'West Bengal',city:'Durgapur',kind:'NIT · Public institute',url:'https://nitdgp.ac.in/'},
-  {name:'Indian Institute of Technology Gandhinagar',state:'Gujarat',city:'Gandhinagar',kind:'IIT · Public institute',url:'https://iitgn.ac.in/'},
-  {name:'Indian Institute of Technology Indore',state:'Madhya Pradesh',city:'Indore',kind:'IIT · Public institute',url:'https://www.iiti.ac.in/'},
-  {name:'Indian Institute of Technology Guwahati',state:'Assam',city:'Guwahati',kind:'IIT · Public institute',url:'https://www.iitg.ac.in/'},
-  {name:'Indian Institute of Technology Bhubaneswar',state:'Odisha',city:'Bhubaneswar',kind:'IIT · Public institute',url:'https://www.iitbbs.ac.in/'}
+  {name:'Indian Institute of Technology Bombay',state:'Maharashtra',district:'Mumbai City',city:'Mumbai',kind:'IIT · Public institute',url:'https://www.iitb.ac.in/'},
+  {name:'Indian Institute of Technology Delhi',state:'Delhi',district:'New Delhi',city:'New Delhi',kind:'IIT · Public institute',url:'https://home.iitd.ac.in/'},
+  {name:'Indian Institute of Technology Madras',state:'Tamil Nadu',district:'Chennai',city:'Chennai',kind:'IIT · Public institute',url:'https://www.iitm.ac.in/'},
+  {name:'Indian Institute of Technology Kanpur',state:'Uttar Pradesh',district:'Kanpur Nagar',city:'Kanpur',kind:'IIT · Public institute',url:'https://www.iitk.ac.in/'},
+  {name:'Indian Institute of Technology Kharagpur',state:'West Bengal',district:'Paschim Medinipur',city:'Kharagpur',kind:'IIT · Public institute',url:'https://www.iitkgp.ac.in/'},
+  {name:'Indian Institute of Technology Hyderabad',state:'Telangana',district:'Sangareddy',city:'Sangareddy',kind:'IIT · Public institute',url:'https://www.iith.ac.in/'},
+  {name:'Indian Institute of Technology Roorkee',state:'Uttarakhand',district:'Haridwar',city:'Roorkee',kind:'IIT · Public institute',url:'https://www.iitr.ac.in/'},
+  {name:'Indian Institute of Technology (BHU) Varanasi',state:'Uttar Pradesh',district:'Varanasi',city:'Varanasi',kind:'IIT · Public institute',url:'https://www.iitbhu.ac.in/'},
+  {name:'National Institute of Technology Tiruchirappalli',state:'Tamil Nadu',district:'Tiruchirappalli',city:'Tiruchirappalli',kind:'NIT · Public institute',url:'https://www.nitt.edu/'},
+  {name:'National Institute of Technology Warangal',state:'Telangana',district:'Hanamkonda',city:'Warangal',kind:'NIT · Public institute',url:'https://www.nitw.ac.in/'},
+  {name:'National Institute of Technology Karnataka, Surathkal',state:'Karnataka',district:'Dakshina Kannada',city:'Surathkal',kind:'NIT · Public institute',url:'https://www.nitk.ac.in/'},
+  {name:'National Institute of Technology Calicut',state:'Kerala',district:'Kozhikode',city:'Kozhikode',kind:'NIT · Public institute',url:'https://nitc.ac.in/'},
+  {name:'National Institute of Technology Rourkela',state:'Odisha',district:'Sundargarh',city:'Rourkela',kind:'NIT · Public institute',url:'https://www.nitrkl.ac.in/'},
+  {name:'National Institute of Technology Andhra Pradesh',state:'Andhra Pradesh',district:'West Godavari',city:'Tadepalligudem',kind:'NIT · Public institute',url:'https://www.nitandhra.ac.in/'},
+  {name:'Andhra University College of Engineering',state:'Andhra Pradesh',district:'Visakhapatnam',city:'Visakhapatnam',kind:'University engineering college',url:'https://www.andhrauniversity.edu.in/'},
+  {name:'Anil Neerukonda Institute of Technology and Sciences (ANITS)',state:'Andhra Pradesh',district:'Visakhapatnam',city:'Visakhapatnam',kind:'Engineering college',url:'https://www.anits.edu.in/'},
+  {name:'Gayatri Vidya Parishad College of Engineering',state:'Andhra Pradesh',district:'Visakhapatnam',city:'Visakhapatnam',kind:'Engineering college',url:'https://gvpce.ac.in/'},
+  {name:'GMR Institute of Technology',state:'Andhra Pradesh',district:'Vizianagaram',city:'Rajam',kind:'Autonomous engineering college',url:'https://gmrit.edu.in/'},
+  {name:'Vignan’s Foundation for Science, Technology and Research',state:'Andhra Pradesh',district:'Guntur',city:'Vadlamudi, Guntur',kind:'Deemed university',url:'https://vignan.ac.in/'},
+  {name:'R.V.R. & J.C. College of Engineering',state:'Andhra Pradesh',district:'Guntur',city:'Guntur',kind:'Autonomous engineering college',url:'https://www.rvrjc.ac.in/'},
+  {name:'Vasireddy Venkatadri Institute of Technology',state:'Andhra Pradesh',district:'Guntur',city:'Nambur, Guntur',kind:'Autonomous engineering college',url:'https://www.vvitguntur.com/'},
+  {name:'N.B.K.R. Institute of Science and Technology',state:'Andhra Pradesh',district:'Tirupati',city:'Vidyanagar, Nellore district',kind:'Autonomous engineering college',url:'https://www.nbkrist.org/'},
+  {name:'Sree Vidyanikethan Engineering College',state:'Andhra Pradesh',district:'Tirupati',city:'Tirupati district',kind:'Engineering college',url:'https://www.svec.education/'},
+  {name:'Sri Venkateswara University College of Engineering',state:'Andhra Pradesh',district:'Tirupati',city:'Tirupati',kind:'University engineering college',url:'https://svuniversity.edu.in/'},
+  {name:'GITAM (Deemed to be University)',state:'Andhra Pradesh',district:'Visakhapatnam',city:'Visakhapatnam',kind:'Deemed university',url:'https://www.gitam.edu/'},
+  {name:'Visvesvaraya National Institute of Technology',state:'Maharashtra',district:'Nagpur',city:'Nagpur',kind:'NIT · Public institute',url:'https://vnit.ac.in/'},
+  {name:'Indian Institute of Information Technology Hyderabad',state:'Telangana',district:'Hyderabad',city:'Hyderabad',kind:'IIIT · Public-private partnership',url:'https://www.iiit.ac.in/'},
+  {name:'International Institute of Information Technology Bangalore',state:'Karnataka',district:'Bengaluru Urban',city:'Bengaluru',kind:'IIIT · Institute of higher education',url:'https://www.iiitb.ac.in/'},
+  {name:'Birla Institute of Technology and Science, Pilani',state:'Rajasthan',district:'Jhunjhunu',city:'Pilani',kind:'Deemed university',url:'https://www.bits-pilani.ac.in/'},
+  {name:'Vellore Institute of Technology',state:'Tamil Nadu',district:'Vellore',city:'Vellore',kind:'Private university',url:'https://vit.ac.in/'},
+  {name:'Amrita Vishwa Vidyapeetham',state:'Tamil Nadu',district:'Coimbatore',city:'Coimbatore',kind:'Deemed university',url:'https://www.amrita.edu/'},
+  {name:'SRM Institute of Science and Technology',state:'Tamil Nadu',district:'Chengalpattu',city:'Kattankulathur',kind:'Deemed university',url:'https://www.srmist.edu.in/'},
+  {name:'Anna University',state:'Tamil Nadu',district:'Chennai',city:'Chennai',kind:'State university',url:'https://www.annauniv.edu/'},
+  {name:'Jadavpur University',state:'West Bengal',district:'Kolkata',city:'Kolkata',kind:'State university',url:'https://jadavpuruniversity.in/'},
+  {name:'Delhi Technological University',state:'Delhi',district:'New Delhi',city:'Delhi',kind:'State university',url:'https://dtu.ac.in/'},
+  {name:'Netaji Subhas University of Technology',state:'Delhi',district:'New Delhi',city:'New Delhi',kind:'State university',url:'https://nsut.ac.in/'},
+  {name:'College of Engineering Pune Technological University',state:'Maharashtra',district:'Pune',city:'Pune',kind:'State public university',url:'https://www.coeptech.ac.in/'},
+  {name:'Punjab Engineering College',state:'Chandigarh',district:'Chandigarh',city:'Chandigarh',kind:'Deemed-to-be university',url:'https://pec.ac.in/'},
+  {name:'Dayananda Sagar University',state:'Karnataka',district:'Bengaluru Urban',city:'Bengaluru',kind:'Private university',url:'https://www.dsu.edu.in/'},
+  {name:'VNR Vignana Jyothi Institute of Engineering and Technology',state:'Telangana',district:'Hyderabad',city:'Hyderabad',kind:'Autonomous engineering college',url:'https://www.vnrvjiet.ac.in/'},
+  {name:'Bharat Institute of Engineering and Technology',state:'Telangana',district:'District not verified',city:'Ibrahimpatnam',kind:'Engineering college',url:'https://biet.ac.in/'},
+  {name:'National Institute of Technology Durgapur',state:'West Bengal',district:'Paschim Bardhaman',city:'Durgapur',kind:'NIT · Public institute',url:'https://nitdgp.ac.in/'},
+  {name:'Indian Institute of Technology Gandhinagar',state:'Gujarat',district:'Gandhinagar',city:'Gandhinagar',kind:'IIT · Public institute',url:'https://iitgn.ac.in/'},
+  {name:'Indian Institute of Technology Indore',state:'Madhya Pradesh',district:'Indore',city:'Indore',kind:'IIT · Public institute',url:'https://www.iiti.ac.in/'},
+  {name:'Indian Institute of Technology Guwahati',state:'Assam',district:'Kamrup Metropolitan',city:'Guwahati',kind:'IIT · Public institute',url:'https://www.iitg.ac.in/'},
+  {name:'Indian Institute of Technology Bhubaneswar',state:'Odisha',district:'Khordha',city:'Bhubaneswar',kind:'IIT · Public institute',url:'https://www.iitbbs.ac.in/'},
+  {name:'JNTU College of Engineering, Hyderabad',state:'Telangana',district:'Medchal–Malkajgiri',city:'Kukatpally, Hyderabad',kind:'University engineering college',url:'https://jntuh.ac.in/'},
+  {name:'Osmania University College of Engineering',state:'Telangana',district:'Hyderabad',city:'Hyderabad',kind:'University engineering college',url:'https://www.osmania.ac.in/'},
+  {name:'Chaitanya Bharathi Institute of Technology',state:'Telangana',district:'Rangareddy',city:'Gandipet, Hyderabad',kind:'Autonomous engineering college',url:'https://www.cbit.ac.in/'},
+  {name:'Vasavi College of Engineering',state:'Telangana',district:'Hyderabad',city:'Ibrahim Bagh, Hyderabad',kind:'Autonomous engineering college',url:'https://www.vce.ac.in/'},
+  {name:'CVR College of Engineering',state:'Telangana',district:'Rangareddy',city:'Mangalpalli, Ibrahimpatnam',kind:'Autonomous engineering college',url:'https://www.cvr.ac.in/'},
+  {name:'Kakatiya Institute of Technology and Science',state:'Telangana',district:'Warangal',city:'Warangal',kind:'Engineering college',url:'https://www.kitsw.ac.in/'},
+  {name:'Muffakham Jah College of Engineering and Technology',state:'Telangana',district:'Hyderabad',city:'Banjara Hills, Hyderabad',kind:'Engineering college',url:'https://mjcollege.ac.in/'},
+  {name:'Sreenidhi Institute of Science and Technology',state:'Telangana',district:'Medchal–Malkajgiri',city:'Ghatkesar',kind:'Autonomous engineering college',url:'https://www.sreenidhi.edu.in/'},
+  {name:'Malla Reddy Engineering College',state:'Telangana',district:'Medchal–Malkajgiri',city:'Maisammaguda, Hyderabad',kind:'Engineering college',url:'https://www.mrec.ac.in/'},
+  {name:'Institute of Aeronautical Engineering',state:'Telangana',district:'Medchal–Malkajgiri',city:'Dundigal, Hyderabad',kind:'Engineering college',url:'https://www.iare.ac.in/'},
+  {name:'JNTU College of Engineering, Anantapur',state:'Andhra Pradesh',district:'Anantapuramu',city:'Anantapuramu',kind:'University engineering college',url:'https://jntua.ac.in/'},
+  {name:'Sri Venkateswara College of Engineering, Tirupati',state:'Andhra Pradesh',district:'Tirupati',city:'Tirupati',kind:'Engineering college',url:'https://svce.edu.in/'},
+  {name:'Prasad V. Potluri Siddhartha Institute of Technology',state:'Andhra Pradesh',district:'NTR',city:'Vijayawada',kind:'Autonomous engineering college',url:'https://www.pvpsiddhartha.ac.in/'},
+  {name:'Gudlavalleru Engineering College',state:'Andhra Pradesh',district:'Krishna',city:'Gudlavalleru',kind:'Autonomous engineering college',url:'https://www.gecgudlavalleru.ac.in/'},
+  {name:'Aditya Engineering College',state:'Andhra Pradesh',district:'Kakinada',city:'Surampalem',kind:'Engineering college',url:'https://aec.edu.in/'}
 ];
 const collegeSearch = document.getElementById('collegeSearch');
 const collegeState = document.getElementById('collegeState');
+const collegeDistrict = document.getElementById('collegeDistrict');
 const collegePriority = document.getElementById('collegePriority');
 const collegeResults = document.getElementById('collegeResults');
 const states = [...new Set(colleges.map(c => c.state))].sort((a,b)=>a.localeCompare(b));
 states.forEach(state => { const option = document.createElement('option'); option.value = state; option.textContent = state; collegeState.appendChild(option); });
+function updateDistrictOptions(){
+  const state = collegeState.value;
+  const previous = collegeDistrict.value;
+  const districts = [...new Set(colleges.filter(c => state === 'all' || c.state === state).map(c => c.district))].filter(d => d && d !== 'District not verified').sort((a,b)=>a.localeCompare(b));
+  collegeDistrict.innerHTML = '<option value="all">All districts</option>';
+  districts.forEach(district => { const option = document.createElement('option'); option.value = district; option.textContent = district; collegeDistrict.appendChild(option); });
+  collegeDistrict.disabled = districts.length === 0;
+  collegeDistrict.value = districts.includes(previous) ? previous : 'all';
+}
 function renderColleges(){
   const query = collegeSearch.value.trim().toLowerCase();
   const state = collegeState.value;
+  const district = collegeDistrict.value;
   const sort = collegePriority.value;
-  let list = colleges.filter(c => (state === 'all' || c.state === state) && `${c.name} ${c.state} ${c.city} ${c.kind}`.toLowerCase().includes(query));
-  list.sort((a,b) => sort === 'region' ? a.state.localeCompare(b.state) || a.name.localeCompare(b.name) : a.name.localeCompare(b.name));
-  document.getElementById('collegeCount').textContent = `${list.length} of ${colleges.length} institutions shown · official links included`;
-  if(!list.length){collegeResults.innerHTML='<div class="panel"><h2>No matching colleges</h2><p class="muted">Try a different college name or select “All India”.</p></div>';return;}
-  collegeResults.innerHTML = list.map(c => `<article class="college-card"><div class="college-symbol">⌂</div><h3>${c.name}</h3><div class="college-type">${c.kind}</div><div class="college-details"><div><span>State / region</span><b>${c.state}</b></div><div><span>City</span><b>${c.city}</b></div><div><span>Fees and branches</span><b>Check official website</b></div></div><span class="college-tag">Official website linked</span><p class="small-note">Course availability, tuition, hostel costs, admissions, and placement outcomes can change. Verify the exact program and academic year directly with the institution.</p><a class="btn secondary full college-website" href="${c.url}" target="_blank" rel="noopener noreferrer">Visit official website ↗</a></article>`).join('');
+  let list = colleges.filter(c => (state === 'all' || c.state === state) && (district === 'all' || c.district === district) && `${c.name} ${c.state} ${c.district} ${c.city} ${c.kind}`.toLowerCase().includes(query));
+  list.sort((a,b) => sort === 'region' ? a.state.localeCompare(b.state) || a.district.localeCompare(b.district) || a.name.localeCompare(b.name) : a.name.localeCompare(b.name));
+  document.getElementById('collegeCount').textContent = `${list.length} of ${colleges.length} institutions shown · filter by state and district · official links included`;
+  if(!list.length){collegeResults.innerHTML='<div class="panel"><h2>No matching colleges</h2><p class="muted">Try a different search, state, or district.</p></div>';return;}
+  collegeResults.innerHTML = list.map(c => `<article class="college-card"><div class="college-symbol">⌂</div><h3>${c.name}</h3><div class="college-type">${c.kind}</div><div class="college-details"><div><span>State</span><b>${c.state}</b></div><div><span>District</span><b>${c.district}</b></div><div><span>City / area</span><b>${c.city}</b></div></div><span class="college-tag">Official website linked</span><p class="small-note">Fees, course availability, hostel costs, admissions, and placement outcomes are not assumed here. Confirm the exact program and academic year with the institution.</p><a class="btn secondary full college-website" href="${c.url}" target="_blank" rel="noopener noreferrer">Visit official website ↗</a></article>`).join('');
 }
-collegeSearch.addEventListener('input',renderColleges);collegeState.addEventListener('change',renderColleges);collegePriority.addEventListener('change',renderColleges);renderColleges();
+collegeState.addEventListener('change',()=>{updateDistrictOptions();renderColleges();});
+collegeDistrict.addEventListener('change',renderColleges);collegeSearch.addEventListener('input',renderColleges);collegePriority.addEventListener('change',renderColleges);updateDistrictOptions();renderColleges();
 
 const budgetForm = document.getElementById('budgetForm');
 const budgetFields = ['tuition','stay','living','other','years','support'];

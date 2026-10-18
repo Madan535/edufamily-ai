@@ -7,7 +7,7 @@ EduFamily AI is a responsive hackathon prototype to help students and families e
 ## Features
 - Separate Home, Career Guide, College Compare, and Budget Planner screens
 - Interest- and subject-based branch suggestions with transparent rule-based scoring and explanations
-- Searchable India-wide college directory with state filters and official website links (46 institutions, including 12 in Andhra Pradesh)
+- Searchable India-wide college directory with state and district filters, search, and official website links (61 institutions, including 17 in Andhra Pradesh and 15 in Telangana)
 - Annual and full-course education cost estimates, including annual support/scholarships
 - Copyable family budget discussion summary
 - Responsive layout for desktop and mobile
@@ -25,7 +25,7 @@ EduFamily AI is a responsive hackathon prototype to help students and families e
 
 ## Important demo limitations
 - Branch suggestions use transparent rule-based matching. This is not a trained AI model and does not call an external AI service.
-- College names and listed city/state labels are intended as a directory of real institutions; official websites are linked for checking current information. The directory does not claim to verify every course, campus-specific detail, fee, hostel cost, admission route, or placement outcome. Confirm these on the linked institution website and relevant official counselling portals. No fee or placement figures are invented or displayed.
+- College names and listed city/state labels are intended as a directory of real institutions; official websites are linked for checking current information. The directory includes 61 institutions across 16 state/region labels. District labels are supplied where available; entries marked “District not verified” remain searchable but are not included as a district filter option. The directory does not claim to verify every course, campus-specific detail, fee, hostel cost, admission route, or placement outcome. Confirm these on the linked institution website and relevant official counselling portals. No fee or placement figures are invented or displayed.
 - Budget figures are estimates and may not include every fee, scholarship condition, or inflation change.
 - Recommendations are informational and should not replace official college information or advice from qualified counsellors.
 
@@ -43,6 +43,9 @@ Add your team name and member names before submission.
 The College Compare directory is a discovery aid, not a ranking or admissions database. It lists institution names, location labels, institution type, and official website links. Course availability, campus-specific details, tuition, hostel costs, admissions routes, and placements can change by program, category, campus, and academic year; these are therefore not represented as verified figures in this prototype. Always confirm them on the official institution website and relevant official admission/counselling portal.
 
 ## Official-source examples consulted
+- Ministry of Education, National Institutes of Technology institutional directory: https://www.education.gov.in/en/node/2545
+- Ministry of Education / NIRF, Engineering participating institutions list: https://www.nirfindia.org/Rankings/2025/EngineeringRankingALL.html
+- AICTE autonomous institution listing: https://facilities.india-aicte.org/dashboard/pages/aicte_autonomus.php
 - VNR Vignana Jyothi Institute of Engineering and Technology, B.Tech admissions and fee information: https://www.vnrvjiet.ac.in/admissions/btech?tab=fees
 - Amrita Vishwa Vidyapeetham, engineering admissions and fee information: https://www.amrita.edu/admissions/engineering/
 - Dayananda Sagar University, program eligibility and fee information: https://in.dsu.edu.in/eligibility
