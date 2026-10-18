@@ -69,3 +69,9 @@ Official examples checked for Andhra Pradesh entries include Andhra University (
 
 ## Geethanjali Institute of Science and Technology
 The official GIST programmes page identifies the institution as autonomous, AICTE-approved, and affiliated to JNTUA, and lists its B.Tech programmes for 2025–26: https://gist.edu.in/gist/programmes-offered/. Its official fee page provides year-specific fee information: https://gist.edu.in/gist/fee-structure/. This prototype links to the official pages instead of copying fee values into the comparison cards, because fees and admission conditions can change.
+
+
+## Home page and visual update
+- The home page now uses a cleaner, soft gradient background and a focused hero layout.
+- Career Guide, College Compare, and Budget Planner navigation appears once in the main navigation instead of repeating as multiple home-page option cards and hero buttons.
+- The home page highlights the student-and-family decision process without duplicating navigation controls.
