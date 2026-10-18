@@ -9,24 +9,25 @@
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="#home"><span class="brand-mark">E</span><span>EduFamily <b>AI</b></span></a>
-    <nav>
-      <a href="#guidance">Career guide</a>
-      <a href="#colleges">College compare</a>
-      <a href="#budget">Budget planner</a>
+    <a class="brand" href="#home" data-view-link="home"><span class="brand-mark">E</span><span>EduFamily <b>AI</b></span></a>
+    <nav aria-label="Main navigation">
+      <a href="#home" data-view-link="home" class="nav-link active">Home</a>
+      <a href="#guidance" data-view-link="guidance" class="nav-link">Career guide</a>
+      <a href="#colleges" data-view-link="colleges" class="nav-link">College compare</a>
+      <a href="#budget" data-view-link="budget" class="nav-link">Budget planner</a>
     </nav>
-    <a class="nav-cta" href="#guidance">Get started <span>↗</span></a>
+    <a class="nav-cta" href="#guidance" data-view-link="guidance">Get started <span>↗</span></a>
   </header>
 
-  <main id="home">
-    <section class="hero">
+  <main id="home" data-view="home">
+    <section class="hero app-home-view">
       <div class="hero-copy">
         <div class="eyebrow"><span class="pulse"></span> STUDENT + FAMILY DECISION SUPPORT</div>
         <h1>Choose your future.<br><span>With confidence.</span></h1>
         <p class="hero-text">A clearer way for students and families to explore engineering branches, compare college options, and plan education costs together.</p>
         <div class="hero-actions">
-          <a class="button primary" href="#guidance">Explore my options <span>→</span></a>
-          <a class="button quiet" href="#how">See how it works</a>
+          <a class="button primary" href="#guidance" data-view-link="guidance">Explore my options <span>→</span></a>
+          <a class="button quiet" href="#how" data-view-link="home">See how it works</a>
         </div>
         <div class="trust-row"><span class="avatars">S&nbsp; P</span><span>Built for students and the people who support them</span></div>
       </div>
@@ -44,11 +45,44 @@
       </div>
     </section>
 
-    <section class="stats" id="how">
+
+    <section class="home-options app-home-view" aria-label="Choose a tool">
+      <div class="home-options-heading">
+        <div class="eyebrow">CHOOSE WHAT YOU NEED</div>
+        <h2>How can we help <span>today?</span></h2>
+        <p>Choose one option to open it on its own page. You can return Home or switch tools anytime.</p>
+      </div>
+      <div class="option-grid">
+        <a class="option-card" href="#guidance" data-view-link="guidance">
+          <span class="option-icon option-purple">✦</span>
+          <span class="option-number">01 · CAREER</span>
+          <strong>Find my engineering branch</strong>
+          <span class="option-description">Answer a few questions and explore suitable branches.</span>
+          <span class="option-action">Open career guide →</span>
+        </a>
+        <a class="option-card" href="#colleges" data-view-link="colleges">
+          <span class="option-icon option-green">⌂</span>
+          <span class="option-number">02 · COLLEGES</span>
+          <strong>Compare colleges</strong>
+          <span class="option-description">Review sample college profiles side by side.</span>
+          <span class="option-action">Open college compare →</span>
+        </a>
+        <a class="option-card" href="#budget" data-view-link="budget">
+          <span class="option-icon option-orange">₹</span>
+          <span class="option-number">03 · BUDGET</span>
+          <strong>Plan education costs</strong>
+          <span class="option-description">Estimate yearly and full-course expenses.</span>
+          <span class="option-action">Open budget planner →</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="stats app-home-view" id="how">
       <div><strong>01</strong><span>Understand interests</span></div><div><strong>02</strong><span>Explore choices</span></div><div><strong>03</strong><span>Plan affordability</span></div><div><strong>04</strong><span>Decide together</span></div>
     </section>
 
-    <section class="section" id="guidance">
+    <section class="section app-page-view" id="guidance" data-page="guidance">
+      <button class="page-back" type="button" data-view-link="home">← Back to Home</button>
       <div class="section-heading"><div><div class="eyebrow">YOUR NEXT STEP</div><h2>Find a branch that fits <span>you.</span></h2></div><p>Answer three quick questions. Get a starting point for a family discussion—not a final decision.</p></div>
       <div class="tool-grid">
         <form class="panel form-panel" id="careerForm">
@@ -67,7 +101,8 @@
       </div>
     </section>
 
-    <section class="section tinted" id="colleges">
+    <section class="section tinted app-page-view" id="colleges" data-page="colleges">
+      <button class="page-back" type="button" data-view-link="home">← Back to Home</button>
       <div class="section-heading"><div><div class="eyebrow">MAKE INFORMED COMPARISONS</div><h2>Look beyond <span>one number.</span></h2></div><p>Use the sample profiles below to compare the kinds of details families should check.</p></div>
       <div class="notice">Demo data only — these are fictional sample colleges, not real institution statistics. Verify official fees and placement reports before making decisions.</div>
       <div class="college-grid">
@@ -78,7 +113,8 @@
       <div class="compare-output panel" id="compareOutput" aria-live="polite"><b>Your comparison list</b><p>Select a sample college above to add it here.</p></div>
     </section>
 
-    <section class="section" id="budget">
+    <section class="section app-page-view" id="budget" data-page="budget">
+      <button class="page-back" type="button" data-view-link="home">← Back to Home</button>
       <div class="section-heading"><div><div class="eyebrow">PLAN AS A FAMILY</div><h2>Make the costs <span>clear.</span></h2></div><p>Estimate a budget before committing. Adjust the values to fit your situation.</p></div>
       <div class="budget-layout">
         <form class="panel budget-form" id="budgetForm">
@@ -93,10 +129,10 @@
       </div>
     </section>
 
-    <section class="family-cta"><div class="cta-star">✦</div><div><div class="eyebrow">A SHARED DECISION</div><h2>Big choices are better <span>when discussed.</span></h2><p>Use these tools to start a practical conversation about interests, costs, and opportunities.</p></div><a class="button light" href="#guidance">Explore again ↑</a></section>
+    <section class="family-cta app-home-view"><div class="cta-star">✦</div><div><div class="eyebrow">A SHARED DECISION</div><h2>Big choices are better <span>when discussed.</span></h2><p>Use these tools to start a practical conversation about interests, costs, and opportunities.</p></div><a class="button light" href="#guidance" data-view-link="guidance">Explore again ↑</a></section>
   </main>
 
-  <footer><a class="brand" href="#home"><span class="brand-mark">E</span><span>EduFamily <b>AI</b></span></a><p>Built for thoughtful engineering education decisions.</p><span class="footer-note">Hackathon demo · Sample data clearly labelled</span></footer>
+  <footer><a class="brand" href="#home" data-view-link="home"><span class="brand-mark">E</span><span>EduFamily <b>AI</b></span></a><p>Built for thoughtful engineering education decisions.</p><span class="footer-note">Hackathon demo · Sample data clearly labelled</span></footer>
   <script src="script.js"></script>
 </body>
 </html>

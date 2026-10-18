@@ -1,3 +1,35 @@
+
+// App-style navigation: Home, Career Guide, College Compare, and Budget Planner act as separate screens.
+(function setupPageNavigation() {
+  const allowedViews = ["home", "guidance", "colleges", "budget"];
+  function showView(view, updateHash = true) {
+    if (!allowedViews.includes(view)) view = "home";
+    document.body.dataset.activeView = view;
+    document.querySelectorAll("[data-view-link]").forEach(link => {
+      const target = link.dataset.viewLink;
+      if (link.classList.contains("nav-link")) {
+        link.classList.toggle("active", target === view);
+        if (target === view) link.setAttribute("aria-current", "page");
+        else link.removeAttribute("aria-current");
+      }
+    });
+    if (updateHash && location.hash !== "#" + view) history.replaceState(null, "", "#" + view);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+  document.addEventListener("click", event => {
+    const link = event.target.closest("[data-view-link]");
+    if (!link) return;
+    event.preventDefault();
+    showView(link.dataset.viewLink);
+  });
+  window.addEventListener("hashchange", () => {
+    const requested = location.hash.slice(1);
+    showView(requested === "how" ? "home" : requested, false);
+  });
+  const initial = location.hash.slice(1);
+  showView(allowedViews.includes(initial) ? initial : "home", false);
+})();
+
 const money = value => new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR", maximumFractionDigits: 0 }).format(value);
 
 const branchDetails = {

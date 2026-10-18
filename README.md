@@ -35,3 +35,7 @@ EduFamily AI is a responsive hackathon prototype that helps students and familie
 
 ## Team
 Add your team name and member names here before submission.
+
+
+## Navigation update
+The homepage now presents three clear options. Career Guide, College Compare, and Budget Planner each open as a separate screen within the website, with Home navigation to return to the dashboard. The demo uses rule-based branch suggestions and fictional college sample data.
