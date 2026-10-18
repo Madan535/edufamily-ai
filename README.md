@@ -81,3 +81,8 @@ The official GIST programmes page identifies the institution as autonomous, AICT
 - Refreshed the homepage with a calm, professional lavender/mint visual theme and a clearer hero section.
 - Main navigation appears only once, in a persistent bottom navigation bar; it is removed from the top header.
 - The bottom navigation works on desktop and mobile and keeps the separate-screen flow for Home, Career Guide, College Compare, and Budget Planner.
+
+
+## College directory update
+
+The College Compare section contains a curated directory of engineering and technical institutions across India, with state and district filters and links intended to point to official institution websites. It is not a complete or live national database. Verify campus address, active programmes, approvals, fees, admissions, and other details through official institution/admission sources before making decisions. Directory entries are provided for discovery; no fee or placement data is asserted.
