@@ -7,7 +7,7 @@ EduFamily AI is a responsive hackathon prototype to help students and families e
 ## Features
 - Separate Home, Career Guide, College Compare, and Budget Planner screens
 - Interest- and subject-based branch suggestions with transparent rule-based scoring and explanations
-- Searchable India-wide college directory with state and district filters, search, and official website links (61 institutions, including 17 in Andhra Pradesh and 15 in Telangana)
+- Searchable India-wide college directory with state and district filters, search, and official website links (61 institutions, including 17 in Andhra Pradesh and 15 in Telangana); Andhra Pradesh district filter includes all 26 districts
 - Annual and full-course education cost estimates, including annual support/scholarships
 - Copyable family budget discussion summary
 - Responsive layout for desktop and mobile
@@ -25,7 +25,7 @@ EduFamily AI is a responsive hackathon prototype to help students and families e
 
 ## Important demo limitations
 - Branch suggestions use transparent rule-based matching. This is not a trained AI model and does not call an external AI service.
-- College names and listed city/state labels are intended as a directory of real institutions; official websites are linked for checking current information. The directory includes 61 institutions across 16 state/region labels. District labels are supplied where available; entries marked “District not verified” remain searchable but are not included as a district filter option. The directory does not claim to verify every course, campus-specific detail, fee, hostel cost, admission route, or placement outcome. Confirm these on the linked institution website and relevant official counselling portals. No fee or placement figures are invented or displayed.
+- College names and listed city/state labels are intended as a directory of real institutions; official websites are linked for checking current information. The directory includes 61 institutions across 16 state/region labels. District labels are supplied where available; entries marked “District not verified” remain searchable but are not included as a district filter option. The Andhra Pradesh filter includes all 26 districts; districts without a directory entry return no matches. Other state filters currently show districts represented by listed institutions, not a complete list of every district in each state. The directory does not claim to verify every course, campus-specific detail, fee, hostel cost, admission route, or placement outcome. Confirm these on the linked institution website and relevant official counselling portals. No fee or placement figures are invented or displayed.
 - Budget figures are estimates and may not include every fee, scholarship condition, or inflation change.
 - Recommendations are informational and should not replace official college information or advice from qualified counsellors.
 
@@ -53,6 +53,10 @@ The College Compare directory is a discovery aid, not a ranking or admissions da
 
 These sources illustrate why fees and program details should be checked for the current academic year; this project does not copy fee figures into the college directory.
 
+
+## State and district coverage note
+
+The directory is an initial India-wide discovery list, not a complete census of every engineering college in India. Andhra Pradesh is the first state with all 26 districts included in the district selector. Where no college is listed for a selected district, the app reports no matches rather than inventing an institution. For other states, district options currently reflect districts represented by directory entries.
 
 ## College directory verification note
 

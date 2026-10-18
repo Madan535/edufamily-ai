@@ -27,7 +27,7 @@
         <div class="hero-copy">
           <span class="eyebrow"><span class="dot"></span> A family-first education planner</span>
           <h1 id="homeTitle">Make your next step in engineering <span>with confidence.</span></h1>
-          <p>Explore branches that match your interests, compare college options, and plan costs together—all in one simple place.</p>
+          <p>Explore branches that match your interests, discover real colleges by state and district, and plan costs together—all in one simple place.</p>
           <div class="hero-actions">
             <button class="btn primary" data-view="career">Explore career paths <span>→</span></button>
             <button class="btn secondary" data-view="budget">Plan your budget</button>
@@ -45,10 +45,10 @@
       <div class="section-heading"><div><span class="eyebrow">YOUR DECISION TOOLKIT</span><h2>Where would you like to start?</h2><p>Choose one area to explore. You can return home at any time.</p></div></div>
       <div class="feature-grid">
         <article class="feature-card card-career"><div class="feature-icon">✦</div><span class="card-kicker">01 / DISCOVER</span><h3>Career Guide</h3><p>Match your favourite subjects and interests with engineering branches and see why they may suit you.</p><button class="text-button" data-view="career">Find your direction <span>→</span></button></article>
-        <article class="feature-card card-college"><div class="feature-icon">⌂</div><span class="card-kicker">02 / COMPARE</span><h3>College Compare</h3><p>Compare example colleges by estimated fees, location, accommodation, and learning priorities.</p><button class="text-button" data-view="colleges">Compare options <span>→</span></button></article>
+        <article class="feature-card card-college"><div class="feature-icon">⌂</div><span class="card-kicker">02 / COMPARE</span><h3>College Compare</h3><p>Explore real colleges by state and district, with links to official websites for checking current details.</p><button class="text-button" data-view="colleges">Compare options <span>→</span></button></article>
         <article class="feature-card card-budget"><div class="feature-icon">₹</div><span class="card-kicker">03 / PLAN</span><h3>Budget Planner</h3><p>Estimate annual and full-course costs, then discuss the plan with your family.</p><button class="text-button" data-view="budget">Build a budget <span>→</span></button></article>
       </div>
-      <div class="notice"><span class="notice-icon">i</span><p><b>About this demo:</b> Career suggestions use transparent, rule-based matching. College profiles are fictional examples, not real college rankings or verified statistics.</p></div>
+      <div class="notice"><span class="notice-icon">i</span><p><b>About this demo:</b> Career suggestions use transparent, rule-based matching. College Compare lists real institutions with official website links. Always verify current courses, fees, and admissions with the institution.</p></div>
     </section>
 
     <section class="view" id="careerView" aria-labelledby="careerTitle">
@@ -70,7 +70,7 @@
     </section>
 
     <section class="view" id="collegesView" aria-labelledby="collegesTitle">
-      <div class="page-heading"><button class="back-link" data-view="home">← Back to home</button><span class="eyebrow">02 / EXPLORE YOUR OPTIONS</span><h1>Compare what <span>matters to you.</span></h1><p>Explore real engineering institutions across India. Open each official website to verify the latest courses, fees, admissions, and facilities.</p></div>
+      <div class="page-heading"><button class="back-link" data-view="home">← Back to home</button><span class="eyebrow">02 / EXPLORE YOUR OPTIONS</span><h1>Compare what <span>matters to you.</span></h1><p>Explore real engineering institutions across India. Choose a state and district to narrow the list. Andhra Pradesh includes all 26 districts in the filter; a district with no listed institution will show no matching colleges. Open official websites to verify current courses, fees, admissions, and facilities.</p></div>
       <div class="filter-row panel"><label for="collegeSearch">Search by college, state, or district</label><input id="collegeSearch" type="search" placeholder="e.g. IIT Hyderabad, Telangana, Warangal" autocomplete="off" /><label for="collegeState">Filter by state / region</label><select id="collegeState"><option value="all">All India</option></select><label for="collegeDistrict">Filter by district</label><select id="collegeDistrict" disabled><option value="all">All districts</option></select><label for="collegePriority">Sort results</label><select id="collegePriority"><option value="name">College name (A–Z)</option><option value="region">State / region</option></select><p class="small-note" id="collegeCount" aria-live="polite"></p></div>
       <div id="collegeResults" class="college-grid" aria-live="polite"></div>
       <div class="notice warning"><span class="notice-icon">!</span><p><b>Data accuracy:</b> College names and official links are provided for discovery. Fees, hostel availability, placements, and exact branch offerings are not asserted here because they vary by course, campus, quota, and academic year. Confirm all details on each institution’s official website before deciding.</p></div>

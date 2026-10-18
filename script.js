@@ -122,10 +122,26 @@ const collegePriority = document.getElementById('collegePriority');
 const collegeResults = document.getElementById('collegeResults');
 const states = [...new Set(colleges.map(c => c.state))].sort((a,b)=>a.localeCompare(b));
 states.forEach(state => { const option = document.createElement('option'); option.value = state; option.textContent = state; collegeState.appendChild(option); });
+// Andhra Pradesh's current district list is included so visitors can browse
+// every district. A district with no directory entry will correctly show no matches.
+const stateDistrictDirectory = {
+  'Andhra Pradesh': [
+    'Alluri Sitharama Raju','Anakapalli','Ananthapuramu','Annamayya','Bapatla',
+    'Chittoor','Dr. B. R. Ambedkar Konaseema','East Godavari','Eluru','Guntur',
+    'Kakinada','Krishna','Kurnool','Nandyal','NTR','Palnadu','Parvathipuram Manyam',
+    'Prakasam','Sri Potti Sriramulu Nellore','Sri Sathya Sai','Srikakulam',
+    'Tirupati','Visakhapatnam','Vizianagaram','West Godavari','YSR Kadapa'
+  ]
+};
 function updateDistrictOptions(){
   const state = collegeState.value;
   const previous = collegeDistrict.value;
-  const districts = [...new Set(colleges.filter(c => state === 'all' || c.state === state).map(c => c.district))].filter(d => d && d !== 'District not verified').sort((a,b)=>a.localeCompare(b));
+  const listedDistricts = colleges
+    .filter(c => state === 'all' || c.state === state)
+    .map(c => c.district)
+    .filter(d => d && d !== 'District not verified');
+  const allStateDistricts = stateDistrictDirectory[state] || [];
+  const districts = [...new Set([...allStateDistricts, ...listedDistricts])].sort((a,b)=>a.localeCompare(b));
   collegeDistrict.innerHTML = '<option value="all">All districts</option>';
   districts.forEach(district => { const option = document.createElement('option'); option.value = district; option.textContent = district; collegeDistrict.appendChild(option); });
   collegeDistrict.disabled = districts.length === 0;
