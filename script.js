@@ -4,22 +4,16 @@ const views = {
   colleges: document.getElementById('collegesView'),
   budget: document.getElementById('budgetView')
 };
-const nav = document.querySelector('.topnav');
+const nav = document.querySelector('.bottom-nav');
 function showView(name) {
   if (!views[name]) return;
   Object.entries(views).forEach(([key, el]) => el.classList.toggle('active', key === name));
   document.querySelectorAll('[data-view]').forEach(btn => {
-    if (btn.classList.contains('nav-link')) btn.classList.toggle('active', btn.dataset.view === name);
+    if (btn.classList.contains('bottom-link')) btn.classList.toggle('active', btn.dataset.view === name);
   });
-  nav.classList.remove('open');
-  document.getElementById('menuToggle').setAttribute('aria-expanded', 'false');
   window.scrollTo({top: 0, behavior: 'smooth'});
 }
 document.querySelectorAll('[data-view]').forEach(btn => btn.addEventListener('click', () => showView(btn.dataset.view)));
-document.getElementById('menuToggle').addEventListener('click', () => {
-  const opened = nav.classList.toggle('open');
-  document.getElementById('menuToggle').setAttribute('aria-expanded', String(opened));
-});
 
 const branchInfo = {
   CSE: {name:'Computer Science Engineering (CSE)', tags:['coding','computers','maths'], reasons:['Software, applications, and computing fundamentals','Problem-solving through programming and algorithms'], next:'Try a small programming project and explore data structures.'},

@@ -75,3 +75,9 @@ The official GIST programmes page identifies the institution as autonomous, AICT
 - The home page now uses a cleaner, soft gradient background and a focused hero layout.
 - Career Guide, College Compare, and Budget Planner navigation appears once in the main navigation instead of repeating as multiple home-page option cards and hero buttons.
 - The home page highlights the student-and-family decision process without duplicating navigation controls.
+
+
+## Home page and navigation refresh
+- Refreshed the homepage with a calm, professional lavender/mint visual theme and a clearer hero section.
+- Main navigation appears only once, in a persistent bottom navigation bar; it is removed from the top header.
+- The bottom navigation works on desktop and mobile and keeps the separate-screen flow for Home, Career Guide, College Compare, and Budget Planner.
