@@ -4,135 +4,104 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="EduFamily AI helps students and families explore engineering branches, compare college options, and plan education costs." />
-  <title>EduFamily AI | Make education decisions together</title>
+  <title>EduFamily AI | Engineering decisions, together</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="#home" data-view-link="home"><span class="brand-mark">E</span><span>EduFamily <b>AI</b></span></a>
-    <nav aria-label="Main navigation">
-      <a href="#home" data-view-link="home" class="nav-link active">Home</a>
-      <a href="#guidance" data-view-link="guidance" class="nav-link">Career guide</a>
-      <a href="#colleges" data-view-link="colleges" class="nav-link">College compare</a>
-      <a href="#budget" data-view-link="budget" class="nav-link">Budget planner</a>
+    <a class="brand" href="#home" data-view="home" aria-label="EduFamily AI home">
+      <span class="brand-mark">EF</span><span>EduFamily <b>AI</b></span>
+    </a>
+    <nav class="topnav" aria-label="Main navigation">
+      <button class="nav-link active" data-view="home">Home</button>
+      <button class="nav-link" data-view="career">Career Guide</button>
+      <button class="nav-link" data-view="colleges">College Compare</button>
+      <button class="nav-link" data-view="budget">Budget Planner</button>
     </nav>
-    <a class="nav-cta" href="#guidance" data-view-link="guidance">Get started <span>↗</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
   </header>
 
-  <main id="home" data-view="home">
-    <section class="hero app-home-view">
-      <div class="hero-copy">
-        <div class="eyebrow"><span class="pulse"></span> STUDENT + FAMILY DECISION SUPPORT</div>
-        <h1>Choose your future.<br><span>With confidence.</span></h1>
-        <p class="hero-text">A clearer way for students and families to explore engineering branches, compare college options, and plan education costs together.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#guidance" data-view-link="guidance">Explore my options <span>→</span></a>
-          <a class="button quiet" href="#how" data-view-link="home">See how it works</a>
+  <main class="container">
+    <section class="view active" id="homeView" aria-labelledby="homeTitle">
+      <div class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="dot"></span> A family-first education planner</span>
+          <h1 id="homeTitle">Make your next step in engineering <span>with confidence.</span></h1>
+          <p>Explore branches that match your interests, compare college options, and plan costs together—all in one simple place.</p>
+          <div class="hero-actions">
+            <button class="btn primary" data-view="career">Explore career paths <span>→</span></button>
+            <button class="btn secondary" data-view="budget">Plan your budget</button>
+          </div>
+          <div class="trust-line"><span>✓</span> Student-friendly guidance <span>✓</span> Family budget planning</div>
         </div>
-        <div class="trust-row"><span class="avatars">S&nbsp; P</span><span>Built for students and the people who support them</span></div>
-      </div>
-      <div class="hero-visual">
-        <div class="orb orb-one"></div><div class="orb orb-two"></div>
-        <div class="dashboard-card">
-          <div class="dash-top"><div><small>YOUR PATHWAY SNAPSHOT</small><h3>Future, made clearer</h3></div><span class="sparkle">✦</span></div>
-          <div class="path-card"><div class="path-icon purple">✳</div><div><b>Discover your branch</b><small>Match interests to options</small></div><span class="arrow">↗</span></div>
-          <div class="path-card"><div class="path-icon green">⌂</div><div><b>Compare colleges</b><small>See costs side by side</small></div><span class="arrow">↗</span></div>
-          <div class="path-card"><div class="path-icon orange">₹</div><div><b>Plan the family budget</b><small>Estimate the full journey</small></div><span class="arrow">↗</span></div>
-          <div class="mini-note"><span class="note-dot"></span><span><b>Better decisions start with a conversation.</b><small>Explore options together, at your own pace.</small></span></div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="hero-core"><div class="core-icon">✦</div><strong>Future<br/>starts here</strong><small>Learn · Compare · Decide</small></div>
+          <div class="float-card float-top"><span class="float-icon purple">⌘</span><div><b>Career fit</b><small>Explore your strengths</small></div></div>
+          <div class="float-card float-bottom"><span class="float-icon green">₹</span><div><b>Budget clarity</b><small>Plan costs together</small></div></div>
         </div>
-        <div class="floating-tag tag-top">✦ Personalised guidance</div>
-        <div class="floating-tag tag-bottom"><span class="green-dot"></span> Student + family in sync</div>
       </div>
+
+      <div class="section-heading"><div><span class="eyebrow">YOUR DECISION TOOLKIT</span><h2>Where would you like to start?</h2><p>Choose one area to explore. You can return home at any time.</p></div></div>
+      <div class="feature-grid">
+        <article class="feature-card card-career"><div class="feature-icon">✦</div><span class="card-kicker">01 / DISCOVER</span><h3>Career Guide</h3><p>Match your favourite subjects and interests with engineering branches and see why they may suit you.</p><button class="text-button" data-view="career">Find your direction <span>→</span></button></article>
+        <article class="feature-card card-college"><div class="feature-icon">⌂</div><span class="card-kicker">02 / COMPARE</span><h3>College Compare</h3><p>Compare example colleges by estimated fees, location, accommodation, and learning priorities.</p><button class="text-button" data-view="colleges">Compare options <span>→</span></button></article>
+        <article class="feature-card card-budget"><div class="feature-icon">₹</div><span class="card-kicker">03 / PLAN</span><h3>Budget Planner</h3><p>Estimate annual and full-course costs, then discuss the plan with your family.</p><button class="text-button" data-view="budget">Build a budget <span>→</span></button></article>
+      </div>
+      <div class="notice"><span class="notice-icon">i</span><p><b>About this demo:</b> Career suggestions use transparent, rule-based matching. College profiles are fictional examples, not real college rankings or verified statistics.</p></div>
     </section>
 
-
-    <section class="home-options app-home-view" aria-label="Choose a tool">
-      <div class="home-options-heading">
-        <div class="eyebrow">CHOOSE WHAT YOU NEED</div>
-        <h2>How can we help <span>today?</span></h2>
-        <p>Choose one option to open it on its own page. You can return Home or switch tools anytime.</p>
-      </div>
-      <div class="option-grid">
-        <a class="option-card" href="#guidance" data-view-link="guidance">
-          <span class="option-icon option-purple">✦</span>
-          <span class="option-number">01 · CAREER</span>
-          <strong>Find my engineering branch</strong>
-          <span class="option-description">Answer a few questions and explore suitable branches.</span>
-          <span class="option-action">Open career guide →</span>
-        </a>
-        <a class="option-card" href="#colleges" data-view-link="colleges">
-          <span class="option-icon option-green">⌂</span>
-          <span class="option-number">02 · COLLEGES</span>
-          <strong>Compare colleges</strong>
-          <span class="option-description">Review sample college profiles side by side.</span>
-          <span class="option-action">Open college compare →</span>
-        </a>
-        <a class="option-card" href="#budget" data-view-link="budget">
-          <span class="option-icon option-orange">₹</span>
-          <span class="option-number">03 · BUDGET</span>
-          <strong>Plan education costs</strong>
-          <span class="option-description">Estimate yearly and full-course expenses.</span>
-          <span class="option-action">Open budget planner →</span>
-        </a>
-      </div>
-    </section>
-
-    <section class="stats app-home-view" id="how">
-      <div><strong>01</strong><span>Understand interests</span></div><div><strong>02</strong><span>Explore choices</span></div><div><strong>03</strong><span>Plan affordability</span></div><div><strong>04</strong><span>Decide together</span></div>
-    </section>
-
-    <section class="section app-page-view" id="guidance" data-page="guidance">
-      <button class="page-back" type="button" data-view-link="home">← Back to Home</button>
-      <div class="section-heading"><div><div class="eyebrow">YOUR NEXT STEP</div><h2>Find a branch that fits <span>you.</span></h2></div><p>Answer three quick questions. Get a starting point for a family discussion—not a final decision.</p></div>
-      <div class="tool-grid">
+    <section class="view" id="careerView" aria-labelledby="careerTitle">
+      <div class="page-heading"><button class="back-link" data-view="home">← Back to home</button><span class="eyebrow">01 / DISCOVER YOUR DIRECTION</span><h1 id="careerTitle">Find a branch that fits <span>you.</span></h1><p>Tell us what you enjoy. We’ll show possible branches and explain the match.</p></div>
+      <div class="two-column">
         <form class="panel form-panel" id="careerForm">
+          <h2>Your interests</h2><p class="muted">Select the options that sound most like you.</p>
           <label for="interest">What do you enjoy most?</label>
-          <select id="interest" required><option value="">Choose an interest</option><option value="coding">Coding, apps and software</option><option value="data">Maths, patterns and data</option><option value="circuits">Electronics and gadgets</option><option value="machines">Machines and designing things</option><option value="buildings">Buildings and infrastructure</option></select>
-          <label for="subject">Which subject do you enjoy?</label>
-          <select id="subject" required><option value="">Choose a subject</option><option value="maths">Mathematics</option><option value="computers">Computer science</option><option value="physics">Physics</option><option value="drawing">Drawing and design</option></select>
-          <label for="goal">What would you like to explore?</label>
-          <select id="goal" required><option value="">Choose a goal</option><option value="software">Software and technology careers</option><option value="research">Research and problem-solving</option><option value="hardware">Hardware and physical systems</option><option value="infrastructure">Infrastructure and design</option></select>
-          <button class="button primary full" type="submit">Show my suggestions <span>→</span></button>
-          <p class="fine-print">Suggestions use transparent, rule-based matching in this demo. They are not a professional assessment.</p>
+          <select id="interest" required><option value="">Choose an interest</option><option value="coding">Coding, apps, and technology</option><option value="machines">Machines, design, and building</option><option value="electronics">Circuits, gadgets, and robotics</option><option value="biology">Biology, health, and useful inventions</option><option value="environment">Nature, energy, and sustainability</option><option value="business">Data, business, and solving practical problems</option></select>
+          <label for="subject">Favourite subject</label>
+          <select id="subject" required><option value="">Choose a subject</option><option value="maths">Mathematics</option><option value="physics">Physics</option><option value="computers">Computer Science</option><option value="biology">Biology</option><option value="chemistry">Chemistry</option></select>
+          <label for="priority">What matters most to you?</label>
+          <select id="priority"><option value="balanced">A balanced mix of interests and opportunities</option><option value="creative">Creative projects and building things</option><option value="research">Research and solving complex problems</option><option value="impact">Making a positive social or environmental impact</option></select>
+          <button class="btn primary full" type="submit">Show my suggestions <span>→</span></button>
         </form>
-        <div class="panel result-panel" id="careerResult" aria-live="polite">
-          <div class="result-empty"><div class="empty-icon">✦</div><h3>Your pathway starts here</h3><p>Complete the questions to see branch suggestions and why they may fit your interests.</p><div class="result-line"></div><div class="result-line short"></div><div class="result-line"></div></div>
+        <div class="panel result-panel" id="careerResults" aria-live="polite"><div class="empty-state"><div class="empty-icon">✧</div><h2>Your recommendations will appear here</h2><p>Choose your interests and select “Show my suggestions” to see possible engineering paths with reasons.</p></div></div>
+      </div>
+      <p class="small-note">These suggestions are a starting point, not a final decision. Review course subjects and talk with students, faculty, and family before choosing.</p>
+    </section>
+
+    <section class="view" id="collegesView" aria-labelledby="collegesTitle">
+      <div class="page-heading"><button class="back-link" data-view="home">← Back to home</button><span class="eyebrow">02 / EXPLORE YOUR OPTIONS</span><h1>Compare what <span>matters to you.</span></h1><p>Use these fictional examples to see how a family could compare colleges consistently.</p></div>
+      <div class="filter-row panel"><label for="maxFee">Maximum annual budget <strong id="maxFeeLabel">₹1,50,000</strong></label><input id="maxFee" type="range" min="50000" max="250000" step="10000" value="150000" /><label for="collegePriority">Main priority</label><select id="collegePriority"><option value="balanced">Balanced overall</option><option value="cost">Lower estimated fees</option><option value="hostel">Hostel availability</option><option value="location">Location preference</option></select></div>
+      <div id="collegeResults" class="college-grid" aria-live="polite"></div>
+      <div class="notice warning"><span class="notice-icon">!</span><p><b>Demo data only:</b> Names, fees, facilities, and other details below are fictional and must not be treated as real college information. Verify details from official sources before making decisions.</p></div>
+    </section>
+
+    <section class="view" id="budgetView" aria-labelledby="budgetTitle">
+      <div class="page-heading"><button class="back-link" data-view="home">← Back to home</button><span class="eyebrow">03 / PLAN TOGETHER</span><h1>Make the costs <span>easier to understand.</span></h1><p>Adjust the estimates to start a realistic conversation about affordability.</p></div>
+      <div class="two-column budget-layout">
+        <form class="panel form-panel" id="budgetForm">
+          <h2>Education cost estimates</h2><p class="muted">Enter amounts in Indian rupees (₹).</p>
+          <label for="tuition">Annual tuition fees (₹)</label><input id="tuition" type="number" min="0" max="10000000" value="100000" required />
+          <label for="stay">Annual hostel / accommodation (₹)</label><input id="stay" type="number" min="0" max="10000000" value="60000" required />
+          <label for="living">Annual food and travel (₹)</label><input id="living" type="number" min="0" max="10000000" value="40000" required />
+          <label for="other">Other annual expenses (₹)</label><input id="other" type="number" min="0" max="10000000" value="15000" required />
+          <label for="years">Course duration</label><select id="years"><option value="4">4 years</option><option value="3">3 years</option><option value="5">5 years</option></select>
+          <label for="support">Annual scholarship / family support (₹)</label><input id="support" type="number" min="0" max="10000000" value="0" required />
+          <button class="btn primary full" type="submit">Calculate my estimate <span>→</span></button>
+        </form>
+        <div class="panel budget-results" id="budgetResults" aria-live="polite">
+          <span class="eyebrow">YOUR ESTIMATE</span><h2>Plan with a clearer picture.</h2>
+          <div class="cost-highlight"><span>Estimated net cost per year</span><strong id="annualCost">₹2,15,000</strong></div>
+          <div class="cost-highlight secondary-cost"><span>Estimated full-course net cost</span><strong id="totalCost">₹8,60,000</strong></div>
+          <div class="cost-breakdown" id="costBreakdown"></div>
+          <p class="small-note">This is a planning estimate, not a fee quote. Actual costs may change and can include deposits, exam fees, equipment, inflation, or other expenses.</p>
+          <button class="btn secondary full" id="copySummary" type="button">Copy family discussion summary</button><p class="copy-status" id="copyStatus" aria-live="polite"></p>
         </div>
       </div>
     </section>
-
-    <section class="section tinted app-page-view" id="colleges" data-page="colleges">
-      <button class="page-back" type="button" data-view-link="home">← Back to Home</button>
-      <div class="section-heading"><div><div class="eyebrow">MAKE INFORMED COMPARISONS</div><h2>Look beyond <span>one number.</span></h2></div><p>Use the sample profiles below to compare the kinds of details families should check.</p></div>
-      <div class="notice">Demo data only — these are fictional sample colleges, not real institution statistics. Verify official fees and placement reports before making decisions.</div>
-      <div class="college-grid">
-        <article class="college-card"><div class="college-art art-purple"><span>01</span><div class="building">▥</div></div><div class="college-content"><div class="college-type">SAMPLE PROFILE A</div><h3>Northstar Institute</h3><p class="location">◉ Urban campus · Sample profile</p><div class="college-metrics"><div><small>Annual tuition</small><b>₹1,20,000</b></div><div><small>Sample placement</small><b>₹6.0 LPA</b></div></div><div class="tag-list"><span>AI & DS</span><span>CSE</span><span>ECE</span></div><button class="text-button compare-btn" data-college="Northstar Institute">Add to comparison ↗</button></div></article>
-        <article class="college-card"><div class="college-art art-green"><span>02</span><div class="building">▤</div></div><div class="college-content"><div class="college-type">SAMPLE PROFILE B</div><h3>Riverbend Engineering</h3><p class="location">◉ Suburban campus · Sample profile</p><div class="college-metrics"><div><small>Annual tuition</small><b>₹90,000</b></div><div><small>Sample placement</small><b>₹5.2 LPA</b></div></div><div class="tag-list"><span>CSE</span><span>EEE</span><span>Mechanical</span></div><button class="text-button compare-btn" data-college="Riverbend Engineering">Add to comparison ↗</button></div></article>
-        <article class="college-card"><div class="college-art art-orange"><span>03</span><div class="building">▦</div></div><div class="college-content"><div class="college-type">SAMPLE PROFILE C</div><h3>Horizon Tech College</h3><p class="location">◉ Regional campus · Sample profile</p><div class="college-metrics"><div><small>Annual tuition</small><b>₹75,000</b></div><div><small>Sample placement</small><b>₹4.8 LPA</b></div></div><div class="tag-list"><span>ECE</span><span>Civil</span><span>CSE</span></div><button class="text-button compare-btn" data-college="Horizon Tech College">Add to comparison ↗</button></div></article>
-      </div>
-      <div class="compare-output panel" id="compareOutput" aria-live="polite"><b>Your comparison list</b><p>Select a sample college above to add it here.</p></div>
-    </section>
-
-    <section class="section app-page-view" id="budget" data-page="budget">
-      <button class="page-back" type="button" data-view-link="home">← Back to Home</button>
-      <div class="section-heading"><div><div class="eyebrow">PLAN AS A FAMILY</div><h2>Make the costs <span>clear.</span></h2></div><p>Estimate a budget before committing. Adjust the values to fit your situation.</p></div>
-      <div class="budget-layout">
-        <form class="panel budget-form" id="budgetForm">
-          <div class="input-row"><label for="tuition">Annual tuition (₹)</label><input id="tuition" type="number" min="0" value="100000" required></div>
-          <div class="input-row"><label for="hostel">Annual hostel / rent (₹)</label><input id="hostel" type="number" min="0" value="60000" required></div>
-          <div class="input-row"><label for="travel">Annual travel (₹)</label><input id="travel" type="number" min="0" value="18000" required></div>
-          <div class="input-row"><label for="other">Other yearly costs (₹)</label><input id="other" type="number" min="0" value="12000" required></div>
-          <div class="input-row"><label for="years">Course duration</label><select id="years"><option value="4">4 years</option><option value="3">3 years</option></select></div>
-          <button class="button primary full" type="submit">Calculate my estimate <span>→</span></button>
-        </form>
-        <div class="budget-result"><div class="eyebrow">YOUR ESTIMATED PLAN</div><p>Estimated yearly cost</p><div class="money" id="yearlyTotal">₹1,90,000</div><div class="budget-divider"></div><p>Estimated full-course cost</p><div class="money big" id="courseTotal">₹7,60,000</div><div class="budget-bar"><span id="tuitionBar"></span><span id="livingBar"></span><span id="otherBar"></span></div><div class="legend"><span><i class="legend-purple"></i> Tuition</span><span><i class="legend-green"></i> Living & travel</span><span><i class="legend-orange"></i> Other</span></div><p class="budget-disclaimer">Estimate only. Actual fees, scholarships, inflation, and personal expenses may change the total.</p></div>
-      </div>
-    </section>
-
-    <section class="family-cta app-home-view"><div class="cta-star">✦</div><div><div class="eyebrow">A SHARED DECISION</div><h2>Big choices are better <span>when discussed.</span></h2><p>Use these tools to start a practical conversation about interests, costs, and opportunities.</p></div><a class="button light" href="#guidance" data-view-link="guidance">Explore again ↑</a></section>
   </main>
 
-  <footer><a class="brand" href="#home" data-view-link="home"><span class="brand-mark">E</span><span>EduFamily <b>AI</b></span></a><p>Built for thoughtful engineering education decisions.</p><span class="footer-note">Hackathon demo · Sample data clearly labelled</span></footer>
+  <footer class="footer"><div class="footer-brand"><span class="brand-mark">EF</span><span>EduFamily <b>AI</b></span></div><p>Better education decisions start with better conversations.</p><small>Hackathon prototype · Rule-based suggestions · Fictional college examples</small></footer>
   <script src="script.js"></script>
 </body>
 </html>

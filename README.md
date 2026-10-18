@@ -2,14 +2,16 @@
 
 **AI-Enabled Family Decision-Support Platform for Engineering Education**
 
-EduFamily AI is a responsive hackathon prototype that helps students and families explore engineering branches, compare college options, and estimate education costs.
+EduFamily AI is a responsive hackathon prototype to help students and families explore engineering branches, compare example college options, and estimate education costs.
 
 ## Features
-- Branch exploration using transparent rule-based matching
-- College comparison using clearly labelled fictional sample data
-- Education budget calculator for annual and full-course estimates
-- Responsive layout for mobile and desktop
-- Family-centred guidance and decision prompts
+- Separate Home, Career Guide, College Compare, and Budget Planner screens
+- Interest- and subject-based branch suggestions with transparent rule-based scoring and explanations
+- College example cards with a budget filter and comparison priorities
+- Annual and full-course education cost estimates, including annual support/scholarships
+- Copyable family budget discussion summary
+- Responsive layout for desktop and mobile
+- Accessible form labels, keyboard-friendly controls, and reduced-motion support
 
 ## Technology
 - HTML5
@@ -22,20 +24,16 @@ EduFamily AI is a responsive hackathon prototype that helps students and familie
 3. No package installation or build step is required.
 
 ## Important demo limitations
-- The branch recommender is rule-based, not a trained AI model or external AI API.
-- College profiles and placement figures are fictional sample data for demonstration only. They must not be presented as real college statistics.
-- Budget figures are estimates and do not include every possible fee, scholarship, or inflation change.
+- Branch suggestions use transparent rule-based matching. This is not a trained AI model and does not call an external AI service.
+- College names, fees, locations, accommodation details, and branches are fictional examples for demonstration only. They must not be represented as real college statistics.
+- Budget figures are estimates and may not include every fee, scholarship condition, or inflation change.
 - Recommendations are informational and should not replace official college information or advice from qualified counsellors.
 
 ## Future improvements
-- Integrate a secure AI API through a backend (never expose API keys in frontend code)
-- Add verified college data with sources and update dates
-- Add scholarship discovery and family-shared decision notes
-- Add accessibility testing and multilingual guidance
+- Integrate an AI API securely through a backend (never expose API keys in frontend code)
+- Replace sample colleges with verified information, sources, and update dates
+- Add scholarship discovery, multilingual guidance, and family-shared notes
+- Perform accessibility and user testing
 
 ## Team
-Add your team name and member names here before submission.
-
-
-## Navigation update
-The homepage now presents three clear options. Career Guide, College Compare, and Budget Planner each open as a separate screen within the website, with Home navigation to return to the dashboard. The demo uses rule-based branch suggestions and fictional college sample data.
+Add your team name and member names before submission.
