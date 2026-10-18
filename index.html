@@ -70,10 +70,10 @@
     </section>
 
     <section class="view" id="collegesView" aria-labelledby="collegesTitle">
-      <div class="page-heading"><button class="back-link" data-view="home">← Back to home</button><span class="eyebrow">02 / EXPLORE YOUR OPTIONS</span><h1>Compare what <span>matters to you.</span></h1><p>Use these fictional examples to see how a family could compare colleges consistently.</p></div>
-      <div class="filter-row panel"><label for="maxFee">Maximum annual budget <strong id="maxFeeLabel">₹1,50,000</strong></label><input id="maxFee" type="range" min="50000" max="250000" step="10000" value="150000" /><label for="collegePriority">Main priority</label><select id="collegePriority"><option value="balanced">Balanced overall</option><option value="cost">Lower estimated fees</option><option value="hostel">Hostel availability</option><option value="location">Location preference</option></select></div>
+      <div class="page-heading"><button class="back-link" data-view="home">← Back to home</button><span class="eyebrow">02 / EXPLORE YOUR OPTIONS</span><h1>Compare what <span>matters to you.</span></h1><p>Explore real engineering institutions across India. Open each official website to verify the latest courses, fees, admissions, and facilities.</p></div>
+      <div class="filter-row panel"><label for="collegeSearch">Search by college or state</label><input id="collegeSearch" type="search" placeholder="e.g. IIT Hyderabad, Tamil Nadu" autocomplete="off" /><label for="collegeState">Filter by state / region</label><select id="collegeState"><option value="all">All India</option></select><label for="collegePriority">Sort results</label><select id="collegePriority"><option value="name">College name (A–Z)</option><option value="region">State / region</option></select><p class="small-note" id="collegeCount" aria-live="polite"></p></div>
       <div id="collegeResults" class="college-grid" aria-live="polite"></div>
-      <div class="notice warning"><span class="notice-icon">!</span><p><b>Demo data only:</b> Names, fees, facilities, and other details below are fictional and must not be treated as real college information. Verify details from official sources before making decisions.</p></div>
+      <div class="notice warning"><span class="notice-icon">!</span><p><b>Data accuracy:</b> College names and official links are provided for discovery. Fees, hostel availability, placements, and exact branch offerings are not asserted here because they vary by course, campus, quota, and academic year. Confirm all details on each institution’s official website before deciding.</p></div>
     </section>
 
     <section class="view" id="budgetView" aria-labelledby="budgetTitle">
@@ -101,7 +101,7 @@
     </section>
   </main>
 
-  <footer class="footer"><div class="footer-brand"><span class="brand-mark">EF</span><span>EduFamily <b>AI</b></span></div><p>Better education decisions start with better conversations.</p><small>Hackathon prototype · Rule-based suggestions · Fictional college examples</small></footer>
+  <footer class="footer"><div class="footer-brand"><span class="brand-mark">EF</span><span>EduFamily <b>AI</b></span></div><p>Better education decisions start with better conversations.</p><small>Hackathon prototype · Rule-based suggestions · College links for discovery; verify details officially</small></footer>
   <script src="script.js"></script>
 </body>
 </html>

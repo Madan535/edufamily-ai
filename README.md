@@ -37,3 +37,15 @@ EduFamily AI is a responsive hackathon prototype to help students and families e
 
 ## Team
 Add your team name and member names before submission.
+
+
+## College directory data policy
+The College Compare directory is a discovery aid, not a ranking or admissions database. It lists institution names, location labels, institution type, and official website links. Course availability, campus-specific details, tuition, hostel costs, admissions routes, and placements can change by program, category, campus, and academic year; these are therefore not represented as verified figures in this prototype. Always confirm them on the official institution website and relevant official admission/counselling portal.
+
+## Official-source examples consulted
+- VNR Vignana Jyothi Institute of Engineering and Technology, B.Tech admissions and fee information: https://www.vnrvjiet.ac.in/admissions/btech?tab=fees
+- Amrita Vishwa Vidyapeetham, engineering admissions and fee information: https://www.amrita.edu/admissions/engineering/
+- Dayananda Sagar University, program eligibility and fee information: https://in.dsu.edu.in/eligibility
+- JoSAA, institute profile and 2026–27 undergraduate fee information: https://josaa.admissions.nic.in/
+
+These sources illustrate why fees and program details should be checked for the current academic year; this project does not copy fee figures into the college directory.

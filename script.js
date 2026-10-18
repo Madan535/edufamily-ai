@@ -53,26 +53,59 @@ document.getElementById('careerForm').addEventListener('submit', e => {
 });
 
 const colleges = [
-  {name:'Riverstone Institute',type:'Fictional example · Engineering',fee:95000,location:'Near home',hostel:'Available',branches:'CSE, ECE, Civil',tag:'Lower estimated cost',symbol:'⌂'},
-  {name:'Northstar Technical College',type:'Fictional example · Engineering',fee:145000,location:'Another city',hostel:'Available',branches:'CSE, AI, ECE',tag:'Technology-focused',symbol:'✦'},
-  {name:'Greenfield Engineering School',type:'Fictional example · Engineering',fee:120000,location:'Near home',hostel:'Limited',branches:'Mechanical, Civil, ECE',tag:'Hands-on focus',symbol:'⌁'}
+  {name:'Indian Institute of Technology Bombay',state:'Maharashtra',city:'Mumbai',kind:'IIT · Public institute',url:'https://www.iitb.ac.in/'},
+  {name:'Indian Institute of Technology Delhi',state:'Delhi',city:'New Delhi',kind:'IIT · Public institute',url:'https://home.iitd.ac.in/'},
+  {name:'Indian Institute of Technology Madras',state:'Tamil Nadu',city:'Chennai',kind:'IIT · Public institute',url:'https://www.iitm.ac.in/'},
+  {name:'Indian Institute of Technology Kanpur',state:'Uttar Pradesh',city:'Kanpur',kind:'IIT · Public institute',url:'https://www.iitk.ac.in/'},
+  {name:'Indian Institute of Technology Kharagpur',state:'West Bengal',city:'Kharagpur',kind:'IIT · Public institute',url:'https://www.iitkgp.ac.in/'},
+  {name:'Indian Institute of Technology Hyderabad',state:'Telangana',city:'Sangareddy',kind:'IIT · Public institute',url:'https://www.iith.ac.in/'},
+  {name:'Indian Institute of Technology Roorkee',state:'Uttarakhand',city:'Roorkee',kind:'IIT · Public institute',url:'https://www.iitr.ac.in/'},
+  {name:'Indian Institute of Technology (BHU) Varanasi',state:'Uttar Pradesh',city:'Varanasi',kind:'IIT · Public institute',url:'https://www.iitbhu.ac.in/'},
+  {name:'National Institute of Technology Tiruchirappalli',state:'Tamil Nadu',city:'Tiruchirappalli',kind:'NIT · Public institute',url:'https://www.nitt.edu/'},
+  {name:'National Institute of Technology Warangal',state:'Telangana',city:'Warangal',kind:'NIT · Public institute',url:'https://www.nitw.ac.in/'},
+  {name:'National Institute of Technology Karnataka, Surathkal',state:'Karnataka',city:'Surathkal',kind:'NIT · Public institute',url:'https://www.nitk.ac.in/'},
+  {name:'National Institute of Technology Calicut',state:'Kerala',city:'Kozhikode',kind:'NIT · Public institute',url:'https://nitc.ac.in/'},
+  {name:'National Institute of Technology Rourkela',state:'Odisha',city:'Rourkela',kind:'NIT · Public institute',url:'https://www.nitrkl.ac.in/'},
+  {name:'National Institute of Technology Andhra Pradesh',state:'Andhra Pradesh',city:'Tadepalligudem',kind:'NIT · Public institute',url:'https://www.nitandhra.ac.in/'},
+  {name:'Visvesvaraya National Institute of Technology',state:'Maharashtra',city:'Nagpur',kind:'NIT · Public institute',url:'https://vnit.ac.in/'},
+  {name:'Indian Institute of Information Technology Hyderabad',state:'Telangana',city:'Hyderabad',kind:'IIIT · Public-private partnership',url:'https://www.iiit.ac.in/'},
+  {name:'International Institute of Information Technology Bangalore',state:'Karnataka',city:'Bengaluru',kind:'IIIT · Institute of higher education',url:'https://www.iiitb.ac.in/'},
+  {name:'Birla Institute of Technology and Science, Pilani',state:'Rajasthan',city:'Pilani',kind:'Deemed university',url:'https://www.bits-pilani.ac.in/'},
+  {name:'Vellore Institute of Technology',state:'Tamil Nadu',city:'Vellore',kind:'Private university',url:'https://vit.ac.in/'},
+  {name:'Amrita Vishwa Vidyapeetham',state:'Tamil Nadu',city:'Coimbatore',kind:'Deemed university',url:'https://www.amrita.edu/'},
+  {name:'SRM Institute of Science and Technology',state:'Tamil Nadu',city:'Kattankulathur',kind:'Deemed university',url:'https://www.srmist.edu.in/'},
+  {name:'Anna University',state:'Tamil Nadu',city:'Chennai',kind:'State university',url:'https://www.annauniv.edu/'},
+  {name:'Jadavpur University',state:'West Bengal',city:'Kolkata',kind:'State university',url:'https://jadavpuruniversity.in/'},
+  {name:'Delhi Technological University',state:'Delhi',city:'Delhi',kind:'State university',url:'https://dtu.ac.in/'},
+  {name:'Netaji Subhas University of Technology',state:'Delhi',city:'New Delhi',kind:'State university',url:'https://nsut.ac.in/'},
+  {name:'College of Engineering Pune Technological University',state:'Maharashtra',city:'Pune',kind:'State public university',url:'https://www.coeptech.ac.in/'},
+  {name:'Punjab Engineering College',state:'Chandigarh',city:'Chandigarh',kind:'Deemed-to-be university',url:'https://pec.ac.in/'},
+  {name:'Dayananda Sagar University',state:'Karnataka',city:'Bengaluru',kind:'Private university',url:'https://www.dsu.edu.in/'},
+  {name:'VNR Vignana Jyothi Institute of Engineering and Technology',state:'Telangana',city:'Hyderabad',kind:'Autonomous engineering college',url:'https://www.vnrvjiet.ac.in/'},
+  {name:'Bharat Institute of Engineering and Technology',state:'Telangana',city:'Ibrahimpatnam',kind:'Engineering college',url:'https://biet.ac.in/'},
+  {name:'National Institute of Technology Durgapur',state:'West Bengal',city:'Durgapur',kind:'NIT · Public institute',url:'https://nitdgp.ac.in/'},
+  {name:'Indian Institute of Technology Gandhinagar',state:'Gujarat',city:'Gandhinagar',kind:'IIT · Public institute',url:'https://iitgn.ac.in/'},
+  {name:'Indian Institute of Technology Indore',state:'Madhya Pradesh',city:'Indore',kind:'IIT · Public institute',url:'https://www.iiti.ac.in/'},
+  {name:'Indian Institute of Technology Guwahati',state:'Assam',city:'Guwahati',kind:'IIT · Public institute',url:'https://www.iitg.ac.in/'},
+  {name:'Indian Institute of Technology Bhubaneswar',state:'Odisha',city:'Bhubaneswar',kind:'IIT · Public institute',url:'https://www.iitbbs.ac.in/'}
 ];
-const maxFee = document.getElementById('maxFee');
-const maxFeeLabel = document.getElementById('maxFeeLabel');
-function rupees(n){return new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR',maximumFractionDigits:0}).format(n)}
+const collegeSearch = document.getElementById('collegeSearch');
+const collegeState = document.getElementById('collegeState');
+const collegePriority = document.getElementById('collegePriority');
+const collegeResults = document.getElementById('collegeResults');
+const states = [...new Set(colleges.map(c => c.state))].sort((a,b)=>a.localeCompare(b));
+states.forEach(state => { const option = document.createElement('option'); option.value = state; option.textContent = state; collegeState.appendChild(option); });
 function renderColleges(){
-  const max = Number(maxFee.value); const priority = document.getElementById('collegePriority').value;
-  maxFeeLabel.textContent = rupees(max);
-  let list = colleges.filter(c => c.fee <= max);
-  if(priority==='cost') list.sort((a,b)=>a.fee-b.fee);
-  if(priority==='hostel') list.sort((a,b)=>(b.hostel==='Available')-(a.hostel==='Available'));
-  if(priority==='location') list.sort((a,b)=>(b.location==='Near home')-(a.location==='Near home'));
-  if(priority==='balanced') list.sort((a,b)=>Math.abs(a.fee-120000)-Math.abs(b.fee-120000));
-  const target = document.getElementById('collegeResults');
-  if(!list.length){target.innerHTML='<div class="panel"><h2>No examples fit this budget</h2><p class="muted">Increase the maximum annual budget to view the fictional sample profiles.</p></div>';return;}
-  target.innerHTML=list.map(c=>`<article class="college-card"><div class="college-symbol">${c.symbol}</div><h3>${c.name}</h3><div class="college-type">${c.type}</div><div class="college-fee">${rupees(c.fee)} <small>/ year (example)</small></div><div class="college-details"><div><span>Location</span><b>${c.location}</b></div><div><span>Accommodation</span><b>${c.hostel}</b></div><div><span>Example branches</span><b>${c.branches}</b></div></div><span class="college-tag">${c.tag}</span><p class="small-note">Compare real colleges using verified fee details, accreditation, course syllabus, facilities, and official placement reports.</p></article>`).join('');
+  const query = collegeSearch.value.trim().toLowerCase();
+  const state = collegeState.value;
+  const sort = collegePriority.value;
+  let list = colleges.filter(c => (state === 'all' || c.state === state) && `${c.name} ${c.state} ${c.city} ${c.kind}`.toLowerCase().includes(query));
+  list.sort((a,b) => sort === 'region' ? a.state.localeCompare(b.state) || a.name.localeCompare(b.name) : a.name.localeCompare(b.name));
+  document.getElementById('collegeCount').textContent = `${list.length} of ${colleges.length} institutions shown · official links included`;
+  if(!list.length){collegeResults.innerHTML='<div class="panel"><h2>No matching colleges</h2><p class="muted">Try a different college name or select “All India”.</p></div>';return;}
+  collegeResults.innerHTML = list.map(c => `<article class="college-card"><div class="college-symbol">⌂</div><h3>${c.name}</h3><div class="college-type">${c.kind}</div><div class="college-details"><div><span>State / region</span><b>${c.state}</b></div><div><span>City</span><b>${c.city}</b></div><div><span>Fees and branches</span><b>Check official website</b></div></div><span class="college-tag">Official website linked</span><p class="small-note">Course availability, tuition, hostel costs, admissions, and placement outcomes can change. Verify the exact program and academic year directly with the institution.</p><a class="btn secondary full college-website" href="${c.url}" target="_blank" rel="noopener noreferrer">Visit official website ↗</a></article>`).join('');
 }
-maxFee.addEventListener('input',renderColleges);document.getElementById('collegePriority').addEventListener('change',renderColleges);renderColleges();
+collegeSearch.addEventListener('input',renderColleges);collegeState.addEventListener('change',renderColleges);collegePriority.addEventListener('change',renderColleges);renderColleges();
 
 const budgetForm = document.getElementById('budgetForm');
 const budgetFields = ['tuition','stay','living','other','years','support'];
