@@ -7,7 +7,7 @@ EduFamily AI is a responsive hackathon prototype to help students and families e
 ## Features
 - Separate Home, Career Guide, College Compare, and Budget Planner screens
 - Interest- and subject-based branch suggestions with transparent rule-based scoring and explanations
-- Searchable India-wide college directory with state and district filters, search, and official website links (61 institutions, including 17 in Andhra Pradesh and 15 in Telangana); Andhra Pradesh district filter includes all 26 districts
+- Searchable India-wide college directory with state and district filters, search, and official website links (75+ institutions, including 30+ in Andhra Pradesh and 15 in Telangana); Andhra Pradesh district filter includes all 26 districts
 - Annual and full-course education cost estimates, including annual support/scholarships
 - Copyable family budget discussion summary
 - Responsive layout for desktop and mobile
@@ -25,7 +25,7 @@ EduFamily AI is a responsive hackathon prototype to help students and families e
 
 ## Important demo limitations
 - Branch suggestions use transparent rule-based matching. This is not a trained AI model and does not call an external AI service.
-- College names and listed city/state labels are intended as a directory of real institutions; official websites are linked for checking current information. The directory includes 61 institutions across 16 state/region labels. District labels are supplied where available; entries marked “District not verified” remain searchable but are not included as a district filter option. The Andhra Pradesh filter includes all 26 districts; districts without a directory entry return no matches. Other state filters currently show districts represented by listed institutions, not a complete list of every district in each state. The directory does not claim to verify every course, campus-specific detail, fee, hostel cost, admission route, or placement outcome. Confirm these on the linked institution website and relevant official counselling portals. No fee or placement figures are invented or displayed.
+- College names and listed city/state labels are intended as a directory of real institutions; official websites are linked for checking current information. The directory includes 75+ institutions across multiple state/region labels. District labels are supplied where available; entries marked “District not verified” remain searchable but are not included as a district filter option. The Andhra Pradesh filter includes all 26 districts; districts without a directory entry return no matches. Other state filters currently show districts represented by listed institutions, not a complete list of every district in each state. The directory does not claim to verify every course, campus-specific detail, fee, hostel cost, admission route, or placement outcome. Confirm these on the linked institution website and relevant official counselling portals. No fee or placement figures are invented or displayed.
 - Budget figures are estimates and may not include every fee, scholarship condition, or inflation change.
 - Recommendations are informational and should not replace official college information or advice from qualified counsellors.
 
@@ -56,12 +56,16 @@ These sources illustrate why fees and program details should be checked for the 
 
 ## State and district coverage note
 
-The directory is an initial India-wide discovery list, not a complete census of every engineering college in India. Andhra Pradesh is the first state with all 26 districts included in the district selector. Where no college is listed for a selected district, the app reports no matches rather than inventing an institution. For other states, district options currently reflect districts represented by directory entries.
+The directory is an India-wide discovery list, not a complete census of every engineering college in India. Andhra Pradesh has all 26 districts included in the district selector. More than 25 Andhra Pradesh institutions are listed, including autonomous and affiliated colleges; some districts still have no listed institution. Where no college is listed for a selected district, the app reports no matches rather than inventing an institution. For other states, district options currently reflect districts represented by directory entries.
 
 ## College directory verification note
 
-The directory includes 46 institutions across multiple Indian states and union territories, with more than 10 entries from Andhra Pradesh. Names and broad locations are cross-checkable against the Ministry of Education's NIRF Engineering participating-institutions list; official institution websites are provided as the primary place to verify current courses, admissions, fees, accommodation, and placements. A directory listing is not an endorsement, ranking, or confirmation that a particular branch is offered in every admission cycle.
+The directory includes 75+ institutions across multiple Indian states and union territories, with more than 25 entries from Andhra Pradesh, including autonomous and affiliated institutions such as Geethanjali Institute of Science and Technology. Names and broad locations are cross-checkable against the Ministry of Education's NIRF Engineering participating-institutions list; official institution websites are provided as the primary place to verify current courses, admissions, fees, accommodation, and placements. A directory listing is not an endorsement, ranking, or confirmation that a particular branch is offered in every admission cycle.
 
 Reference directory: https://www.nirfindia.org/Rankings/2025/EngineeringRankingALL.html
 
 Official examples checked for Andhra Pradesh entries include Andhra University (https://www.andhrauniversity.edu.in/), ANITS (https://www.anits.edu.in/), GVP College of Engineering (https://gvpce.ac.in/), GMR Institute of Technology (https://gmrit.edu.in/), Vignan's Foundation for Science, Technology and Research (https://vignan.ac.in/), R.V.R. & J.C. College of Engineering (https://www.rvrjc.ac.in/), Vasireddy Venkatadri Institute of Technology (https://www.vvitguntur.com/), NBKR Institute of Science and Technology (https://www.nbkrist.org/), and NIT Andhra Pradesh (https://www.nitandhra.ac.in/).
+
+
+## Geethanjali Institute of Science and Technology
+The official GIST programmes page identifies the institution as autonomous, AICTE-approved, and affiliated to JNTUA, and lists its B.Tech programmes for 2025–26: https://gist.edu.in/gist/programmes-offered/. Its official fee page provides year-specific fee information: https://gist.edu.in/gist/fee-structure/. This prototype links to the official pages instead of copying fee values into the comparison cards, because fees and admission conditions can change.

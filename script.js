@@ -74,7 +74,7 @@ const colleges = [
   {name:'Vignan’s Foundation for Science, Technology and Research',state:'Andhra Pradesh',district:'Guntur',city:'Vadlamudi, Guntur',kind:'Deemed university',url:'https://vignan.ac.in/'},
   {name:'R.V.R. & J.C. College of Engineering',state:'Andhra Pradesh',district:'Guntur',city:'Guntur',kind:'Autonomous engineering college',url:'https://www.rvrjc.ac.in/'},
   {name:'Vasireddy Venkatadri Institute of Technology',state:'Andhra Pradesh',district:'Guntur',city:'Nambur, Guntur',kind:'Autonomous engineering college',url:'https://www.vvitguntur.com/'},
-  {name:'N.B.K.R. Institute of Science and Technology',state:'Andhra Pradesh',district:'Tirupati',city:'Vidyanagar, Nellore district',kind:'Autonomous engineering college',url:'https://www.nbkrist.org/'},
+  {name:'N.B.K.R. Institute of Science and Technology',state:'Andhra Pradesh',district:'Sri Potti Sriramulu Nellore',city:'Vidyanagar',kind:'Autonomous engineering college',url:'https://www.nbkrist.org/'},
   {name:'Sree Vidyanikethan Engineering College',state:'Andhra Pradesh',district:'Tirupati',city:'Tirupati district',kind:'Engineering college',url:'https://www.svec.education/'},
   {name:'Sri Venkateswara University College of Engineering',state:'Andhra Pradesh',district:'Tirupati',city:'Tirupati',kind:'University engineering college',url:'https://svuniversity.edu.in/'},
   {name:'GITAM (Deemed to be University)',state:'Andhra Pradesh',district:'Visakhapatnam',city:'Visakhapatnam',kind:'Deemed university',url:'https://www.gitam.edu/'},
@@ -113,7 +113,21 @@ const colleges = [
   {name:'Sri Venkateswara College of Engineering, Tirupati',state:'Andhra Pradesh',district:'Tirupati',city:'Tirupati',kind:'Engineering college',url:'https://svce.edu.in/'},
   {name:'Prasad V. Potluri Siddhartha Institute of Technology',state:'Andhra Pradesh',district:'NTR',city:'Vijayawada',kind:'Autonomous engineering college',url:'https://www.pvpsiddhartha.ac.in/'},
   {name:'Gudlavalleru Engineering College',state:'Andhra Pradesh',district:'Krishna',city:'Gudlavalleru',kind:'Autonomous engineering college',url:'https://www.gecgudlavalleru.ac.in/'},
-  {name:'Aditya Engineering College',state:'Andhra Pradesh',district:'Kakinada',city:'Surampalem',kind:'Engineering college',url:'https://aec.edu.in/'}
+  {name:'Aditya Engineering College',state:'Andhra Pradesh',district:'Kakinada',city:'Surampalem',kind:'Engineering college',url:'https://aec.edu.in/'},
+  {name:'Geethanjali Institute of Science and Technology',state:'Andhra Pradesh',district:'Sri Potti Sriramulu Nellore',city:'Gangavaram, Kovur',kind:'Autonomous · affiliated to JNTUA',url:'https://gist.edu.in/gist/programmes-offered/'},
+  {name:'Sree Venkateswara College of Engineering',state:'Andhra Pradesh',district:'Sri Potti Sriramulu Nellore',city:'North Rajupalem',kind:'Engineering college',url:'https://svcn.ac.in/'},
+  {name:'Bapatla Engineering College',state:'Andhra Pradesh',district:'Bapatla',city:'Bapatla',kind:'Autonomous engineering college',url:'https://www.becbapatla.ac.in/'},
+  {name:'QIS College of Engineering and Technology',state:'Andhra Pradesh',district:'Prakasam',city:'Ongole',kind:'Engineering college',url:'https://www.qiscet.edu.in/'},
+  {name:'Siddharth Institute of Engineering and Technology',state:'Andhra Pradesh',district:'Tirupati',city:'Puttur',kind:'Autonomous engineering college',url:'https://www.sietk.org/'},
+  {name:'Sri Sai Institute of Technology and Science',state:'Andhra Pradesh',district:'Annamayya',city:'Rayachoty',kind:'Engineering college',url:'https://www.sists.org/'},
+  {name:'SVR Engineering College',state:'Andhra Pradesh',district:'Nandyal',city:'Nandyal',kind:'Engineering college',url:'https://www.svrec.ac.in/'},
+  {name:'Eswar College of Engineering',state:'Andhra Pradesh',district:'Palnadu',city:'Narasaraopet',kind:'Engineering college',url:'https://www.eswarcollegeofengg.org/'},
+  {name:'Sir C R Reddy College of Engineering',state:'Andhra Pradesh',district:'Eluru',city:'Eluru',kind:'Autonomous engineering college',url:'https://www.sircrrengg.ac.in/'},
+  {name:'Vishnu Institute of Technology',state:'Andhra Pradesh',district:'West Godavari',city:'Bhimavaram',kind:'Autonomous engineering college',url:'https://www.vishnu.edu.in/'},
+  {name:'Bonam Venkata Chalamayya Engineering College',state:'Andhra Pradesh',district:'Dr. B. R. Ambedkar Konaseema',city:'Odalarevu',kind:'Engineering college',url:'https://www.bvcec.org/'},
+  {name:'KSRM College of Engineering',state:'Andhra Pradesh',district:'YSR Kadapa',city:'Kadapa',kind:'Autonomous engineering college',url:'https://www.ksrmce.ac.in/'},
+  {name:'Lendi Institute of Engineering and Technology',state:'Andhra Pradesh',district:'Vizianagaram',city:'Jonnada',kind:'Autonomous engineering college',url:'https://www.lendi.org/'},
+  {name:'G. Pulla Reddy Engineering College',state:'Andhra Pradesh',district:'Kurnool',city:'Kurnool',kind:'Autonomous engineering college',url:'https://www.gprec.ac.in/'}
 ];
 const collegeSearch = document.getElementById('collegeSearch');
 const collegeState = document.getElementById('collegeState');
