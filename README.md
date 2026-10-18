@@ -36,7 +36,7 @@ EduFamily AI is a responsive hackathon prototype to help students and families e
 - Perform accessibility and user testing
 
 ## Team
-Team name MJ Tech and member 2.
+Team name MJ Tech and members 2.
 
 
 ## College directory data policy
